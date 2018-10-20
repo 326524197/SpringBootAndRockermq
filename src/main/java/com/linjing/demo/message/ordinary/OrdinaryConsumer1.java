@@ -1,4 +1,4 @@
-package com.linjing.demo;
+package com.linjing.demo.message.ordinary;
 
 import org.apache.rocketmq.client.consumer.DefaultMQPushConsumer;
 import org.apache.rocketmq.client.consumer.listener.ConsumeConcurrentlyContext;
@@ -14,12 +14,12 @@ import java.util.List;
  * @author cxc
  * @date 2018/10/18 17:07
  */
-public class Consumer2 {
-    public static void main(String[] args) throws MQClientException{
+public class OrdinaryConsumer1 {
+    public static void main(String[] args) throws MQClientException {
         /**
          * Consumer Group,非常重要的概念，后续会慢慢补充
          */
-        DefaultMQPushConsumer consumer = new DefaultMQPushConsumer("consumer_demo");
+        DefaultMQPushConsumer consumer = new DefaultMQPushConsumer("consumer_demo1");
 //指定NameServer地址，多个地址以 ; 隔开
 //        consumer.setNamesrvAddr("112.74.43.136:9876;192.168.116.116:9876"); //修改为自己的
         consumer.setNamesrvAddr("112.74.43.136:9876");
