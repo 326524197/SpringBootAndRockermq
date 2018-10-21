@@ -30,7 +30,8 @@ public class OrdinaryConsumer {
  */
         consumer.setConsumeFromWhere(ConsumeFromWhere.CONSUME_FROM_FIRST_OFFSET);
 
-        consumer.subscribe("TopicTest", "*");
+
+        consumer.subscribe("TopicTest", "TagA || TagC || TagD");
 
         consumer.registerMessageListener(new MessageListenerOrderly() {
             @Override
@@ -44,7 +45,10 @@ public class OrdinaryConsumer {
                     e.printStackTrace();
                     return ConsumeOrderlyStatus.SUSPEND_CURRENT_QUEUE_A_MOMENT; //稍后再试
                 }
-                return ConsumeOrderlyStatus.SUCCESS; //消费成功
+                //返回消费状态
+                //SUCCESS 消费成功
+                //SUSPEND_CURRENT_QUEUE_A_MOMENT 消费失败，暂停当前队列的消费
+                return ConsumeOrderlyStatus.SUCCESS;
             }
         });
 
