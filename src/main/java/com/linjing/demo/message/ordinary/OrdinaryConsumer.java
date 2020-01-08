@@ -22,7 +22,7 @@ public class OrdinaryConsumer {
         DefaultMQPushConsumer consumer = new DefaultMQPushConsumer("consumer_demo");
 //指定NameServer地址，多个地址以 ; 隔开
 //        consumer.setNamesrvAddr("112.74.43.136:9876;192.168.116.116:9876"); //修改为自己的
-        consumer.setNamesrvAddr("112.74.43.136:9876");
+        consumer.setNamesrvAddr("127.0.0.1:9876");
 
 /**
  * 设置Consumer第一次启动是从队列头部开始消费还是队列尾部开始消费

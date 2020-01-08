@@ -21,7 +21,7 @@ public class Producer {
         //修改为自己的
         //多个可以用";"隔开
         //producer.setNamesrvAddr("192.168.116.115:9876;192.168.116.116:9876");
-        producer.setNamesrvAddr("112.74.43.136:9876");
+        producer.setNamesrvAddr("127.0.0.1:9876");
 
         /*
          * Producer对象在使用之前必须要调用start初始化，初始化一次即可

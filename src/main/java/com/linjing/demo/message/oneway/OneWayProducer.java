@@ -16,7 +16,7 @@ public class OneWayProducer {
 
     public static void main(String[] args) throws MQClientException, InterruptedException, UnsupportedEncodingException {
         DefaultMQProducer producer = new DefaultMQProducer("producer_demo");
-        producer.setNamesrvAddr("112.74.43.136:9876");
+        producer.setNamesrvAddr("127.0.0.1:9876");
         producer.start();
 
         for (int i = 0; i <= 10; i++) {
