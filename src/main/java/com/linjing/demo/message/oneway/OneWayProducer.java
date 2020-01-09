@@ -7,11 +7,6 @@ import org.apache.rocketmq.common.message.Message;
 import java.io.UnsupportedEncodingException;
 import java.util.Date;
 
-/**
- * @author cxc
- * @date 2018/10/18 17:07
- * rockerMq发送单向消息
- */
 public class OneWayProducer {
 
     public static void main(String[] args) throws MQClientException, InterruptedException, UnsupportedEncodingException {
@@ -33,6 +28,6 @@ public class OneWayProducer {
                 Thread.sleep(1000);
             }
         }
-        producer.shutdown();
+//        producer.shutdown();
     }
 }
